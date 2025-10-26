@@ -9,164 +9,152 @@
     :root {
       --spotify-green: #1db954;
       --dark-bg: #191414;
-      --light-gray: #b3b3b3;
+      --gray-txt: #b3b3b3;
     }
     * { box-sizing: border-box; }
     body {
       margin: 0;
-      background: var(--dark-bg);
+      background: linear-gradient(to bottom, #221e1e 0%, #191414 80%);
       color: #fff;
       font-family: 'Montserrat', Arial, sans-serif;
       min-height: 100vh;
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding-bottom: 110px;
+      padding-bottom: 120px;
     }
-    .profile-section {
+    .main-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       width: 100%;
-      max-width: 900px;
-      margin: 40px auto 20px auto;
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      gap: 32px;
+      max-width: 500px;
+      margin-top: 35px;
+      padding: 0 16px;
     }
-    .profile-img-holder {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      margin-right: 24px;
-    }
-    .profile-img {
-      width: 160px;
-      height: 160px;
+    .album-cover {
+      width: 240px;
+      height: 240px;
+      border-radius: 14px;
+      box-shadow: 0 10px 28px 0 #15121266, 0 2px 4px #0002;
+      border: 4px solid #232323;
+      background: #232323;
       object-fit: cover;
-      border-radius: 16px;
-      border: 5px solid var(--spotify-green);
-      box-shadow: 0 4px 32px rgba(30,30,30,0.4);
-      margin-bottom: 16px;
-      background: #eeeeee33;
-    }
-    .main-details {
-      flex: 1;
-      min-width: 230px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-    .profile-name {
-      font-size: 2.0rem;
-      font-weight: 700;
-      margin-bottom: 4px;
-      letter-spacing: 0.3px;
-      line-height: 1.07;
+      margin-bottom: 27px;
     }
     .album-name {
-      font-size: 1.6rem;
-      font-weight: bold;
-      margin-bottom: 3px;
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 8px;
       color: #fff;
-      text-transform: uppercase;
-      letter-spacing: .1em;
+      line-height: 1.16;
+      letter-spacing: .04em;
     }
-    .stats-row {
-      display: flex;
-      align-items: center;
-      gap: 20px;
+    .profile-name {
+      font-size: 1.03rem;
+      letter-spacing: .03em;
+      color: var(--gray-txt);
+      margin-bottom: 5px;
+      margin-top: -4px;
+    }
+    .desc {
+      color: #e1e1e1;
       margin-bottom: 12px;
-      margin-top: 6px;
+      margin-top: 8px;
+      font-size: 1.05rem;
+      text-align: center;
     }
     .listeners {
-      color: var(--light-gray);
-      font-size: 1.07rem;
-      display: flex;
-      align-items: center;
+      color: var(--gray-txt);
+      font-size: 1.04rem;
+      margin-bottom: 22px;
+      text-align: center;
     }
-    .spotify-actionbar {
+    .stats-row {
+      color: var(--gray-txt);
+      font-size: 1.01rem;
+      margin-bottom: 5px;
+      text-align: center;
+    }
+    .action-bar {
+      width: 100%;
       display: flex;
+      justify-content: space-between;
       align-items: center;
-      gap: 38px;
-      margin: 22px 0 32px 0;
-      justify-content: flex-start;
+      margin-bottom: 30px;
+      padding: 0 14px;
+      gap: 0;
     }
     .action-btn {
       background: none;
       border: none;
       cursor: pointer;
       padding: 0;
+      margin: 0 8px 0 0;
       display: flex;
       align-items: center;
-      justify-content: center;
       outline: none;
     }
     .svg-icon {
-      width: 46px;
-      height: 46px;
+      width: 38px;
+      height: 38px;
       fill: none;
       stroke: #b3b3b3;
-      stroke-width: 3;
+      stroke-width: 2.5;
       display: block;
     }
     .dot-svg {
-      width: 18px; height: 46px;
+      width: 15px; height: 38px;
       display: flex;
       align-items: center;
     }
     .shuffle-svg {
-      width: 46px;
-      height: 46px;
+      width: 38px;
+      height: 38px;
       stroke-width: 3;
       stroke: #b3b3b3;
       fill: none;
     }
     .play-btn-large {
-      width: 60px;
-      height: 60px;
+      width: 56px;
+      height: 56px;
       background: var(--spotify-green);
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
       border: none;
-      box-shadow: 0 2px 18px rgba(16,185,64,0.18);
-      margin-left: 18px;
+      margin: 0 0 0 16px;
       cursor: pointer;
+      box-shadow: 0 2px 18px rgba(16,185,64,0.18);
     }
     .play-btn-large svg {
-      width: 34px;
-      height: 34px;
+      width: 29px;
+      height: 29px;
       fill: #191414;
-      margin-left: 4px;
-    }
-    .profile-subtitle {
-      color: var(--light-gray);
-      font-size: 1.09rem;
-      margin-bottom: 7px;
-      font-weight: 400;
+      margin-left: 3px;
     }
     .tracklist-section {
       width: 100%;
       max-width: 500px;
       background: #212121;
-      border-radius: 20px;
+      border-radius: 18px;
       box-shadow: 0 2px 20px rgba(30,30,30,0.7);
-      padding: 28px 18px 18px 18px;
-      margin-bottom: 32px;
+      padding: 18px 12px 17px 14px;
+      margin: 15px 0 33px 0;
     }
     .track-row {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 14px 10px;
+      padding: 14px 6px;
       border-radius: 12px;
-      margin-bottom: 10px;
+      margin-bottom: 7px;
       transition: background 0.18s;
       cursor: pointer;
     }
     .track-row:hover {
-      background: rgba(29, 185, 84, 0.09);
+      background: rgba(29, 185, 84, 0.12);
     }
     .track-info {
       display: flex;
@@ -175,7 +163,7 @@
       min-width: 0;
     }
     .track-title {
-      font-size: 1.15rem;
+      font-size: 1.1rem;
       font-weight: 500;
       margin-right: 18px;
       color: #fff;
@@ -187,34 +175,34 @@
       white-space: nowrap;
     }
     .track-timing {
-      color: var(--light-gray);
-      font-size: 1.03rem;
-      margin-right: 16px;
+      color: var(--gray-txt);
+      font-size: 0.99rem;
+      margin-right: 13px;
       flex-shrink: 0;
-      opacity: 0.8;
-      width: 48px;
+      opacity: 0.9;
+      width: 47px;
       text-align: right;
     }
     .play-btn {
       background: var(--spotify-green);
       border: none;
       border-radius: 50%;
-      width: 44px;
-      height: 44px;
+      width: 41px;
+      height: 41px;
       display: flex;
       align-items: center;
       justify-content: center;
       cursor: pointer;
       transition: background 0.18s, transform 0.14s;
       outline: none;
-      box-shadow: 0 2px 12px rgba(30,185,84,0.14);
+      box-shadow: 0 2px 9px rgba(30,185,84,0.10);
     }
     .play-btn:active {
-      transform: scale(0.96);
+      transform: scale(0.965);
     }
     .play-btn svg {
-      width: 20px;
-      height: 20px;
+      width: 18px;
+      height: 18px;
       fill: #fff;
       margin-left: 2px;
     }
@@ -271,8 +259,8 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      height: 79px;
-      padding: 10px 28px;
+      height: 70px;
+      padding: 8px 28px;
       box-shadow: 0 -3px 18px rgba(0,0,0,0.13);
       z-index: 950;
       min-width: 0;
@@ -283,124 +271,103 @@
       min-width: 0;
     }
     .playbar-cover {
-      width: 53px;
-      height: 53px;
+      width: 44px;
+      height: 44px;
       object-fit: cover;
-      border-radius: 8px;
-      margin-right: 16px;
-      border: 2.5px solid var(--spotify-green);
+      border-radius: 7px;
+      margin-right: 11px;
+      border: 2px solid var(--spotify-green);
       flex-shrink: 0;
     }
     .playbar-song-title {
-      font-size: 1.08rem;
+      font-size: 1.04rem;
       font-weight: 600;
       color: #fff;
       min-width: 0;
-      text-align: left;
-      margin-bottom: 3px;
+      margin-bottom: 2px;
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
     }
     .playbar-timing {
-      color: var(--light-gray);
-      font-size: 0.99rem;
+      color: var(--gray-txt);
+      font-size: 0.95rem;
     }
     .playbar-actions {
       margin-left: auto;
-      gap: 0 9px;
+      gap: 0 8px;
     }
     .playbar-btn {
       background: var(--spotify-green);
       border: none;
       border-radius: 50%;
-      width: 38px;
-      height: 38px;
+      width: 32px;
+      height: 32px;
       display: flex;
       align-items: center;
       justify-content: center;
-      margin-left: 4px;
-      transition: background 0.17s;
+      margin-left: 2px;
+      transition: background 0.15s;
       cursor: pointer;
       outline: none;
-      box-shadow: 0 1.5px 6px rgba(30,185,84,0.10);
+      box-shadow: 0 1.5px 5px rgba(30,185,84,0.10);
     }
     .playbar-btn svg {
-      width: 17px;
-      height: 17px;
+      width: 14px;
+      height: 14px;
       fill: #fff;
     }
-    @media (max-width: 960px){
-      .profile-section {flex-direction: column; align-items: flex-start; max-width: 98vw;}
-      .profile-img-holder {margin-right: 0;}
-      .main-details {align-items: flex-start;}
-    }
     @media (max-width: 600px) {
-      .profile-img { width: 92px; height: 92px;}
-      .playbar-cover { width: 37px; height: 37px;}
-      .playbar-container { height: 58px; }
-      html { font-size: 97%; }
-      .main-details {margin-left: 0;}
-      .spotify-actionbar{gap:20px;}
-    }
-    @media (max-width: 400px) {
-      .modal { padding: 10vw 1vw; }
+      .album-cover { width: 99vw; height: 99vw; max-width: 270px; max-height: 270px;}
+      .main-wrap, .tracklist-section { max-width: 99vw;}
     }
   </style>
 </head>
 <body>
-  <div class="profile-section">
-    <div class="profile-img-holder">
-      <img src="1000044399.jpg" alt="Jaswanth Sriram Album" class="profile-img">
-    </div>
-    <div class="main-details">
-      <div class="profile-name">Jaswanth Sriram</div>
-      <div class="album-name">VOTE FOR ME</div>
-      <div class="stats-row">
-        <span class="listeners"><svg width="19" height="19" viewBox="0 0 24 24" fill="#b3b3b3" style="margin-right:4px;"><circle cx="12" cy="5" r="2"/><circle cx="5.5" cy="18.5" r="1.5"/><circle cx="18.5" cy="18.5" r="1.5"/><path d="M12 7c-2.67 0-8 1.34-8 4v4h16v-4c0-2.66-5.33-4-8-4z"/></svg>420 listeners</span>
-      </div>
-      <div class="spotify-actionbar">
-        <!-- Add / Plus -->
-        <button class="action-btn" title="Add">
-          <svg class="svg-icon" viewBox="0 0 56 56">
-            <circle cx="28" cy="28" r="23" stroke="#b3b3b3" stroke-width="3" fill="none"/>
-            <line x1="28" y1="17" x2="28" y2="39" stroke="#b3b3b3" stroke-width="3"/>
-            <line x1="17" y1="28" x2="39" y2="28" stroke="#b3b3b3" stroke-width="3"/>
-          </svg>
-        </button>
-        <!-- Download (Arrow in circle) -->
-        <button class="action-btn" title="Download">
-          <svg class="svg-icon" viewBox="0 0 56 56">
-            <circle cx="28" cy="28" r="23" stroke="#b3b3b3" stroke-width="3" fill="none"/>
-            <line x1="28" y1="17" x2="28" y2="36" stroke="#b3b3b3" stroke-width="3"/>
-            <polyline points="22,31 28,38 34,31" fill="none" stroke="#b3b3b3" stroke-width="3"/>
-          </svg>
-        </button>
-        <!-- More (Vertical Dots) -->
-        <button class="action-btn" title="More">
-          <svg class="dot-svg" viewBox="0 0 18 46">
-            <circle cx="9" cy="11" r="2.5" fill="#b3b3b3"/>
-            <circle cx="9" cy="23" r="2.5" fill="#b3b3b3"/>
-            <circle cx="9" cy="35" r="2.5" fill="#b3b3b3"/>
-          </svg>
-        </button>
-        <!-- Shuffle (Crossed Arrows) -->
-        <button class="action-btn" title="Shuffle">
-          <svg class="shuffle-svg" viewBox="0 0 56 56">
-            <polyline points="13,42 22,33 34,21 43,30" fill="none" stroke="#b3b3b3" stroke-width="3"/>
-            <polyline points="43,21 43,30 36,30" fill="none" stroke="#b3b3b3" stroke-width="3"/>
-            <polyline points="13,14 22,23 34,35 43,26" fill="none" stroke="#b3b3b3" stroke-width="3"/>
-            <polyline points="43,35 43,26 36,26" fill="none" stroke="#b3b3b3" stroke-width="3"/>
-          </svg>
-        </button>
-        <!-- Large Green Play -->
-        <button class="play-btn-large" onclick="setPlaybar(0);showPremiumModal();" title="Play">
-          <svg viewBox="0 0 56 56">
-            <polygon points="22,16 44,28 22,40" fill="#191414"/>
-          </svg>
-        </button>
-      </div>
-      <div class="profile-subtitle">Future General Secretary - JAGSOM</div>
+  <div class="main-wrap">
+    <img src="1000044399.jpg" alt="Jaswanth Sriram Album" class="album-cover">
+    <div class="album-name">JASWANTH SRIRAM</div>
+    <div class="profile-name">Vote for me · Candidate: General Secretary - JAGSOM</div>
+    <div class="desc">Be a part of it.<br> </div>
+    <div class="listeners">420 listeners</div>
+    <div class="action-bar">
+      <!-- Add / Plus -->
+      <button class="action-btn" title="Add">
+        <svg class="svg-icon" viewBox="0 0 56 56">
+          <circle cx="28" cy="28" r="23" stroke="#b3b3b3" stroke-width="3" fill="none"/>
+          <line x1="28" y1="17" x2="28" y2="39" stroke="#b3b3b3" stroke-width="3"/>
+          <line x1="17" y1="28" x2="39" y2="28" stroke="#b3b3b3" stroke-width="3"/>
+        </svg>
+      </button>
+      <!-- Download (Arrow in circle) -->
+      <button class="action-btn" title="Download">
+        <svg class="svg-icon" viewBox="0 0 56 56">
+          <circle cx="28" cy="28" r="23" stroke="#b3b3b3" stroke-width="3" fill="none"/>
+          <line x1="28" y1="17" x2="28" y2="36" stroke="#b3b3b3" stroke-width="3"/>
+          <polyline points="22,31 28,38 34,31" fill="none" stroke="#b3b3b3" stroke-width="3"/>
+        </svg>
+      </button>
+      <!-- More (Vertical Dots) -->
+      <button class="action-btn" title="More">
+        <svg class="dot-svg" viewBox="0 0 15 38">
+          <circle cx="7.5" cy="9" r="2.5" fill="#b3b3b3"/>
+          <circle cx="7.5" cy="19" r="2.5" fill="#b3b3b3"/>
+          <circle cx="7.5" cy="29" r="2.5" fill="#b3b3b3"/>
+        </svg>
+      </button>
+      <!-- Shuffle (Crossed Arrows) -->
+      <button class="action-btn" title="Shuffle">
+        <svg class="shuffle-svg" viewBox="0 0 38 38">
+          <polyline points="3,35 13,25 25,13 35,23" fill="none" stroke="#b3b3b3" stroke-width="3"/>
+          <polyline points="35,13 35,23 27,23" fill="none" stroke="#b3b3b3" stroke-width="3"/>
+          <polyline points="3,3 13,13 25,25 35,15" fill="none" stroke="#b3b3b3" stroke-width="3"/>
+          <polyline points="35,25 35,15 27,15" fill="none" stroke="#b3b3b3" stroke-width="3"/>
+        </svg>
+      </button>
+      <!-- Large Green Play -->
+      <button class="play-btn-large" onclick="setPlaybar(0);showPremiumModal();" title="Play">
+        <svg viewBox="0 0 56 56"><polygon points="22,17 44,28 22,39" fill="#191414"/></svg>
+      </button>
     </div>
   </div>
 
